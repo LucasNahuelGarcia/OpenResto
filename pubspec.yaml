@@ -1,4 +1,4 @@
-name: open_resto
+name: openResto
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -35,6 +35,10 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+
+
+
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -70,7 +74,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
-fonts:
-- family: Oleo
   fonts:
-    - asset: fonts/Oleo.ttf
+  - family: Oleo
+    fonts:
+      - asset: fonts/Oleo.ttf

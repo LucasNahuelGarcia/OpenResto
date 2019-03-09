@@ -9,7 +9,7 @@ INJECTED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/debug/
 INJECTED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:2:5-37
+		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:2:5-36
 		INJECTED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/debug/AndroidManifest.xml
 	android:versionName
@@ -30,7 +30,7 @@ ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/Andr
 		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:12:9-43
 	android:name
 		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:10:9-57
-activity#com.example.open_resto.MainActivity
+activity#com.example.openresto.MainActivity
 ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:13:9-31:20
 	android:launchMode
 		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:15:13-43
