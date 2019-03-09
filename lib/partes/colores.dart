@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-final verdeTitulo = const Color.fromARGB(255, 24, 104, 0);
-final verdeTituloTransparente = const Color.fromARGB(100, 24, 104, 0);
+final verdeTitulo = const Color(0xFF6AAD0D);
+final verdeInput = const Color(0xFF0A8A35);
 
-final verdeFondo = const Color(0xFF082800);
-final principal = const Color(0xFFacba0e);
+final verdeFondo = const Color(0xFF00531C);
 
+final principal = const Color(0xFF6AAD0D);
+final highlight = const Color(0xFF3FB366);

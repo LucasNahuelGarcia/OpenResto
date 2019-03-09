@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'colores.dart' as colores;
 
-
 class TituloApp extends StatelessWidget {
   final fontSize;
 
@@ -11,28 +10,28 @@ class TituloApp extends StatelessWidget {
     return Text(
       "VeganEssen",
       style: TextStyle(
-          fontFamily: "Oleo", fontSize: fontSize, color: colores.verdeTitulo),
+        fontFamily: "Oleo",
+        fontSize: fontSize,
+        color: colores.verdeTitulo,
+      ),
     );
   }
 }
 
-
 ThemeData temaDefault = ThemeData(
+  primaryColor: colores.principal,
+  highlightColor: colores.highlight,
   textSelectionColor: Colors.blue,
   indicatorColor: colores.principal,
-  highlightColor: Colors.white,
-
-  primaryColor: colores.principal,
-
   backgroundColor: colores.verdeFondo,
   cursorColor: colores.principal,
   inputDecorationTheme: InputDecorationTheme(
     hasFloatingPlaceholder: true,
     border: OutlineInputBorder(),
-    fillColor: colores.verdeTituloTransparente,
+    fillColor: Colors.white,
     filled: true,
     hintStyle: TextStyle(color: Colors.grey),
   ),
   scaffoldBackgroundColor: colores.verdeFondo,
-  buttonColor: colores.principal
+  buttonColor: colores.principal,
 );

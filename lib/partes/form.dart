@@ -18,7 +18,6 @@ class FormLogIn extends StatelessWidget {
       children: <Widget>[
         TextField(
           //input Email
-          style: TextStyle(color: Colors.white),
           focusNode: focusEmail,
           keyboardType: TextInputType.emailAddress,
           textInputAction: TextInputAction.next,
@@ -37,7 +36,6 @@ class FormLogIn extends StatelessWidget {
         ),
         TextField(
           //input Contraseña
-          style: TextStyle(color: Colors.white),
           focusNode: focusPass,
           controller: passwordController,
           onSubmitted: (term) {
