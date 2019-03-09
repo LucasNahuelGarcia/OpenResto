@@ -30,7 +30,7 @@ ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/Andr
 		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:12:9-43
 	android:name
 		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:10:9-57
-activity#com.example.veganessen.MainActivity
+activity#com.example.open_resto.MainActivity
 ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:13:9-31:20
 	android:launchMode
 		ADDED from /home/lucas/Documentos/proyectos/veganessen/android/app/src/main/AndroidManifest.xml:15:13-43

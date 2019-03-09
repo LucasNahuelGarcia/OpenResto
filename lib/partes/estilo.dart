@@ -8,11 +8,11 @@ class TituloApp extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Text(
-      "VeganEssen",
+      "OpenResto",
       style: TextStyle(
         fontFamily: "Oleo",
         fontSize: fontSize,
-        color: colores.verdeTitulo,
+        color: colores.verdeClaro,
       ),
     );
   }
@@ -23,7 +23,7 @@ ThemeData temaDefault = ThemeData(
   highlightColor: colores.highlight,
   textSelectionColor: Colors.blue,
   indicatorColor: colores.principal,
-  backgroundColor: colores.verdeFondo,
+  backgroundColor: colores.verdeOscuro,
   cursorColor: colores.principal,
   inputDecorationTheme: InputDecorationTheme(
     hasFloatingPlaceholder: true,
@@ -32,6 +32,6 @@ ThemeData temaDefault = ThemeData(
     filled: true,
     hintStyle: TextStyle(color: Colors.grey),
   ),
-  scaffoldBackgroundColor: colores.verdeFondo,
+  scaffoldBackgroundColor: colores.verdeOscuro,
   buttonColor: colores.principal,
 );

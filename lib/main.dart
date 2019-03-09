@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "VeganEssen",
+      title: "OpenResto",
       routes: <String, WidgetBuilder> {
         "VistaLogIn" : (BuildContext context) => new VistaLogIn(),
         "VistaMain" : (BuildContext context) => new VistaMain()

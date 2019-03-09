@@ -1,4 +1,4 @@
-package com.example.veganessen;
+package com.example.OpenResto;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
