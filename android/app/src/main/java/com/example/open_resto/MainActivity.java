@@ -1,4 +1,4 @@
-package com.example.openresto;
+package com.mojitodebs.openresto;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
