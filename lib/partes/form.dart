@@ -85,7 +85,7 @@ class FormLogIn extends StatelessWidget {
   ///Funciones ---------------------------
   void tryLogIn(BuildContext context) async {
     bool logInAttempt =
-        await userAuth.logIn(emailController.text, passwordController.text);
+        await userAuth.intentarLogIn(emailController.text, passwordController.text);
     if (logInAttempt) {
       mensajeError.state.toggleVer(false);
       Navigator.pushReplacementNamed(context, "VistaMain");

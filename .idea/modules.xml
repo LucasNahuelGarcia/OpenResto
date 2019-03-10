@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OpenResto.iml" filepath="$PROJECT_DIR$/OpenResto.iml" />
       <module fileurl="file://$PROJECT_DIR$/android/OpenResto_android.iml" filepath="$PROJECT_DIR$/android/OpenResto_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/openresto.iml" filepath="$PROJECT_DIR$/.idea/openresto.iml" />
     </modules>
   </component>
 </project>

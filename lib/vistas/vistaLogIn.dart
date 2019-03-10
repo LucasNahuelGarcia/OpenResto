@@ -11,6 +11,7 @@ class VistaLogIn extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: RadialGradient(
+            center: Alignment(0, -1),
             radius: 2,
             colors: [colores.verdeOscuro, Colors.black],
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../partes/mapa.dart';
 import '../partes/lista.dart';
+import '../datosGlobales.dart' as datos;
 
 
 class VistaMain extends StatelessWidget {
@@ -28,8 +29,8 @@ class VistaMain extends StatelessWidget {
         child: Column(
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountEmail: Text("lala"),
-              accountName: Text("NombreLaLa"),
+              accountEmail: Text(datos.usuario.email != null ? datos.usuario.email : ""),
+              accountName: Text(datos.usuario.displayName != null ? datos.usuario.displayName : ""),
             )
           ],
         ),
