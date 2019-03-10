@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lucas/Documentos/proyectos/veganessen/build/app/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "/home/lucas/Documentos/proyectos/openresto/build/app/intermediates/res/merged/debug/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/home/lucas/Documentos/proyectos/veganessen/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/lucas/Documentos/proyectos/openresto/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

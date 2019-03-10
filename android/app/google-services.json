@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1089320910363",
+    "firebase_url": "https://openresto-f8f8a.firebaseio.com",
+    "project_id": "openresto-f8f8a",
+    "storage_bucket": "openresto-f8f8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089320910363:android:d2a689f347c4b417",
+        "android_client_info": {
+          "package_name": "com.mojitodebs.openresto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089320910363-5l8b8pmjgbebfn5tff3626ce8sejie10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY17JwMFQ75UMmZpWL7U9_9F2llvfIIzs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
