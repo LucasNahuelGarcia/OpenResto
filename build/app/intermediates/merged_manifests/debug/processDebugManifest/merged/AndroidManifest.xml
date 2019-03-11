@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mojitodebs.openresto"
+    package="com.mojitodevs.openresto"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -29,7 +29,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="openResto" >
         <activity
-            android:name="com.mojitodebs.openresto.MainActivity"
+            android:name="com.mojitodevs.openresto.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
@@ -140,7 +140,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.mojitodebs.openresto.firebaseinitprovider"
+            android:authorities="com.mojitodevs.openresto.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 

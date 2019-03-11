@@ -6,6 +6,7 @@ INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/An
 INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:1:1-33:12
 MERGED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:1:1-33:12
 MERGED from [:firebase_auth] /home/lucas/Documentos/proyectos/openresto/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] /home/lucas/Documentos/proyectos/openresto/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] /home/lucas/Documentos/proyectos/openresto/build/google_sign_in/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_core] /home/lucas/Documentos/proyectos/openresto/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-core:16.0.4] /home/lucas/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/b24a249938f66d814c80c58e4ae6139e/AndroidManifest.xml:2:1-9:12
@@ -111,7 +112,7 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/lucas/.gradle/caches/tr
 		ADDED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:12:9-43
 	android:name
 		ADDED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:10:9-57
-activity#com.mojitodebs.openresto.MainActivity
+activity#com.mojitodevs.openresto.MainActivity
 ADDED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:13:9-31:20
 	android:launchMode
 		ADDED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:15:13-43
@@ -147,6 +148,8 @@ INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/An
 INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml
 MERGED from [:firebase_auth] /home/lucas/Documentos/proyectos/openresto/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/lucas/Documentos/proyectos/openresto/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /home/lucas/Documentos/proyectos/openresto/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /home/lucas/Documentos/proyectos/openresto/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] /home/lucas/Documentos/proyectos/openresto/build/google_sign_in/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] /home/lucas/Documentos/proyectos/openresto/build/google_sign_in/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /home/lucas/Documentos/proyectos/openresto/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44

@@ -18,6 +18,23 @@ class TituloApp extends StatelessWidget {
   }
 }
 
+class TituloRegistrarse extends StatelessWidget {
+  final fontSize;
+
+  TituloRegistrarse(this.fontSize);
+
+  Widget build(BuildContext context) {
+    return Text(
+      "Registrarse",
+      style: TextStyle(
+        fontFamily: "Oleo",
+        fontSize: fontSize,
+        color: colores.verdeClaro,
+      ),
+    );
+  }
+}
+
 ThemeData temaDefault = ThemeData(
   primaryColor: colores.principal,
   highlightColor: colores.highlight,
@@ -32,6 +49,6 @@ ThemeData temaDefault = ThemeData(
     filled: true,
     hintStyle: TextStyle(color: Colors.grey),
   ),
-  scaffoldBackgroundColor: colores.verdeOscuro,
+  scaffoldBackgroundColor: Color(0xFF055360),
   buttonColor: colores.principal,
 );

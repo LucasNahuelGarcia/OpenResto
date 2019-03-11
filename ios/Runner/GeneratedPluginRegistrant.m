@@ -6,6 +6,7 @@
 #import <firebase_auth/FirebaseAuthPlugin.h>
 #import <firebase_core/FirebaseCorePlugin.h>
 #import <google_sign_in/GoogleSignInPlugin.h>
+#import <path_provider/PathProviderPlugin.h>
 
 @implementation GeneratedPluginRegistrant
 
@@ -13,6 +14,7 @@
   [FLTFirebaseAuthPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseAuthPlugin"]];
   [FLTFirebaseCorePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseCorePlugin"]];
   [FLTGoogleSignInPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTGoogleSignInPlugin"]];
+  [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
 }
 
 @end

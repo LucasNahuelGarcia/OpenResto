@@ -1,4 +1,4 @@
-com.mojitodebs.openresto
+com.mojitodevs.openresto
 attr buttonSize
 attr circleCrop
 attr colorScheme

@@ -13,11 +13,25 @@ Future<bool> intentarLogIn(String email, String passwrd) async {
         await _auth.signInWithEmailAndPassword(password: passwrd, email: email);
     print("ingresando con usuario $email");
   } catch (e) {
+    //si hay un error, devolver falso
     datos.usuario = null;
     print(e);
     return false;
   }
-
+  //si se inicio sesion sin errores devolver verdadero y asignar el usuario
   datos.usuario = user;
   return true;
+}
+Future<bool> registrarUsuario(String email, String passwd) async {
+  FirebaseUser user;
+  try {
+    user = await _auth.createUserWithEmailAndPassword(password: passwd, email: email);
+
+  } catch (e) {
+    print(e);
+    return false;
+  }
+
+    datos.usuario =user;
+    return true;
 }
