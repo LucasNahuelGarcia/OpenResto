@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'botonFlotanteMain.dart';
 
 class MapaRest extends StatefulWidget {
   @override
@@ -10,6 +11,18 @@ class MapaRest extends StatefulWidget {
 class MapaRestState extends State<MapaRest> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Icon(Icons.map,size: 200.0, color: Colors.white,),);
+    return Container(
+      child: Stack(
+        alignment: AlignmentDirectional.center,
+        children: <Widget>[
+          Icon(
+            Icons.map,
+            size: 200.0,
+            color: Colors.white,
+          ),
+          FloatingLabelMain(iconData: Icons.list,alignment: Alignment.bottomRight,)
+        ],
+      ),
+    );
   }
 }

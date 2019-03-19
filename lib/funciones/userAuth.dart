@@ -5,6 +5,14 @@ import '../datosGlobales.dart' as datos;
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn _googleSignIn = GoogleSignIn();
 
+class ProtoUsuario {
+  String nombre;
+  String email;
+  String password;
+}
+
+ProtoUsuario protoUsuario = ProtoUsuario();
+
 Future<bool> intentarLogIn(String email, String passwrd) async {
   FirebaseUser user;
   try {
@@ -22,16 +30,20 @@ Future<bool> intentarLogIn(String email, String passwrd) async {
   datos.usuario = user;
   return true;
 }
-Future<bool> registrarUsuario(String email, String passwd) async {
+Future<bool> registrarUsuario(String email, String passwd, String nombre) async {
   FirebaseUser user;
   try {
     user = await _auth.createUserWithEmailAndPassword(password: passwd, email: email);
 
+    UserUpdateInfo userUpdateInfo =UserUpdateInfo();
+    userUpdateInfo.displayName = nombre;
+
+    user.updateProfile(userUpdateInfo);
   } catch (e) {
     print(e);
     return false;
   }
 
-    datos.usuario =user;
+    datos.usuario = user;
     return true;
 }

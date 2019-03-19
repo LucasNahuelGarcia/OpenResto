@@ -224,6 +224,7 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f05001f;
     public static final int notification_tile_bg=0x7f050020;
     public static final int notify_panel_notification_icon_bg=0x7f050021;
+    public static final int toast_bg=0x7f050022;
   }
   public static final class id {
     public static final int action0=0x7f060000;

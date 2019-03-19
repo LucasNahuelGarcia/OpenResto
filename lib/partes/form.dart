@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import '../funciones/userAuth.dart' as userAuth;
 import 'mensajes.dart' as mensajes;
 
@@ -70,7 +71,7 @@ class FormLogIn extends StatelessWidget {
                   style: TextStyle(color: Colors.blueAccent),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, "VistaRegistrarse");
+                  Navigator.pushNamed(context, "VistaRegistrarseUserMail");
                 },
 
                 splashColor: Colors.white,
@@ -105,12 +106,117 @@ class FormLogIn extends StatelessWidget {
   }
 }
 
-class FormRegistrarse extends StatelessWidget {
+class FormRegistrarseUserMail extends StatelessWidget {
+  final TextEditingController userController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController passwordConfController = TextEditingController();
 
   final FocusNode focusEmail = FocusNode();
+  final FocusNode focusUsuario = FocusNode();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      child: Column(
+        children: <Widget>[
+          TextField(
+            //nombre de usuario
+            controller: userController,
+            focusNode: focusUsuario,
+            textInputAction: TextInputAction.next,
+            textCapitalization: TextCapitalization.words,
+            onSubmitted: (text) {
+              FocusScope.of(context).requestFocus(focusEmail);
+            },
+            decoration: InputDecoration(
+              hintText: "nombre",
+              prefixIcon: Icon(
+                Icons.person,
+              ),
+            ),
+          ),
+          TextField(
+            //email
+            controller: emailController,
+            focusNode: focusEmail,
+            textInputAction: TextInputAction.done,
+            keyboardType: TextInputType.emailAddress,
+            onSubmitted: (text) {
+              _siguiente(context);
+            },
+            decoration: InputDecoration(
+              hintText: "email",
+              prefixIcon: Icon(
+                Icons.email,
+              ),
+            ),
+          ),
+          Container(
+            //botones
+            padding: EdgeInsets.all(25.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                RaisedButton(
+                    //Boton Siguiente
+                    child: Text(
+                      "Siguiente",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 15.0),
+                    ),
+                    onPressed: () {
+                      _siguiente(context);
+                    }),
+                RaisedButton(
+                  //Boton Google
+                  color: Colors.white,
+
+                  child: Text(
+                    "Ingresar con Google",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  onPressed: () {},
+
+                  splashColor: Colors.white,
+                  highlightColor: Colors.white,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  ///Funciones ------------------------------------
+  bool _verificarCampos() {
+    if (emailController.text != "" && userController.text != "") {
+      return true;
+    } else {
+      Fluttertoast.showToast(
+        msg: "Ambos campos son obligatorios",
+        gravity: ToastGravity.BOTTOM,
+        textColor: Colors.black,
+        backgroundColor: Colors.yellow[300],
+      );
+      return false;
+    }
+  }
+
+  void _siguiente(context) {
+    if (_verificarCampos()) {
+      userAuth.protoUsuario.nombre = userController.text;
+      userAuth.protoUsuario.email = emailController.text;
+
+      Navigator.pushNamed(context, "VistaRegistrarsePass");
+    }
+  }
+}
+
+class FormRegistrarsePass extends StatelessWidget {
+  final TextEditingController passController = TextEditingController();
+  final TextEditingController passConfController = TextEditingController();
+
   final FocusNode focusPass = FocusNode();
   final FocusNode focusPassConf = FocusNode();
 
@@ -121,28 +227,10 @@ class FormRegistrarse extends StatelessWidget {
       child: Column(
         children: <Widget>[
           TextField(
-            controller: emailController,
-            focusNode: focusEmail,
-            textInputAction: TextInputAction.continueAction,
-            keyboardType: TextInputType.emailAddress,
-            onSubmitted: (text) {
-              focusEmail.unfocus();
-              FocusScope.of(context).requestFocus(focusPass);
-            },
-            decoration: InputDecoration(
-              hintText: "email",
-              prefixIcon: Icon(
-                Icons.email,
-              ),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(top: 10.0),
-          ),
-          TextField(
-            controller: passwordController,
+            //Contraseña
+            controller: passController,
             focusNode: focusPass,
-            textInputAction: TextInputAction.continueAction,
+            textInputAction: TextInputAction.next,
             onSubmitted: (text) {
               focusPass.unfocus();
               FocusScope.of(context).requestFocus(focusPassConf);
@@ -155,16 +243,19 @@ class FormRegistrarse extends StatelessWidget {
             ),
           ),
           TextField(
-            controller: passwordConfController,
+            //Confirmar contraseña
+            controller: passConfController,
             focusNode: focusPassConf,
             textInputAction: TextInputAction.done,
+            keyboardType: TextInputType.emailAddress,
             onSubmitted: (text) {
-
+              focusPassConf.unfocus();
+              _registrarse(context);
             },
             decoration: InputDecoration(
-              hintText: "confirmar contraseña",
+              hintText: "verificar",
               prefixIcon: Icon(
-                Icons.lock,
+                Icons.verified_user,
               ),
             ),
           ),
@@ -175,24 +266,24 @@ class FormRegistrarse extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 RaisedButton(
-                    //Boton Ingresar
+                    //Boton Siguiente
                     child: Text(
-                      "Registrarse",
+                      "Siguiente",
                       style: TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 15.0),
                     ),
-                    onPressed: () {}),
+                    onPressed: () {
+                      _registrarse(context);
+                    }),
                 RaisedButton(
-                  //Boton Registrarse
+                  //Boton Google
                   color: Colors.white,
 
                   child: Text(
                     "Ingresar con Google",
                     style: TextStyle(color: Colors.black),
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, "VistaRegistrarse");
-                  },
+                  onPressed: () {},
 
                   splashColor: Colors.white,
                   highlightColor: Colors.white,
@@ -203,5 +294,44 @@ class FormRegistrarse extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  ///Funciones ------------------------------------
+  bool _verificarCampos() {
+    if (passController.text != "" && passConfController.text != "") {
+      if (passController.text != passConfController.text) {
+        Fluttertoast.showToast(
+          msg: "Las contraseñas no coinciden",
+          gravity: ToastGravity.BOTTOM,
+          textColor: Colors.black,
+          backgroundColor: Colors.yellow[300],
+        );
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      Fluttertoast.showToast(
+        msg: "Ambos campos son obligatorios",
+        gravity: ToastGravity.BOTTOM,
+        textColor: Colors.black,
+        backgroundColor: Colors.yellow[300],
+      );
+      return false;
+    }
+  }
+
+  void _registrarse(context) async {
+    if (_verificarCampos()) {
+      userAuth.protoUsuario.password = passController.text;
+
+      if (await userAuth.registrarUsuario(userAuth.protoUsuario.email,
+          userAuth.protoUsuario.password, userAuth.protoUsuario.nombre)) {
+        //si se creo el usuario sin errores
+          //Navigator.popUntil(context, ModalRoute.withName("VistaLogIn"));
+      }
+
+      Navigator.popAndPushNamed(context, "VistaRegistrarsePass");
+    }
   }
 }

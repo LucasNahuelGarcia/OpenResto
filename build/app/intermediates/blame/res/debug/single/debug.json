@@ -216,6 +216,10 @@
         "source": "/home/lucas/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/48add064b6eb6ce65ff005b21f6e0933/res/layout/notification_template_big_media.xml"
     },
     {
+        "merged": "/home/lucas/Documentos/proyectos/openresto/build/app/intermediates/res/merged/debug/drawable_toast_bg.xml.flat",
+        "source": "/home/lucas/Documentos/proyectos/openresto/build/fluttertoast/intermediates/packaged_res/debug/drawable/toast_bg.xml"
+    },
+    {
         "merged": "/home/lucas/Documentos/proyectos/openresto/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "/home/lucas/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bbf3a2fd51b074e0729ecada00908642/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },

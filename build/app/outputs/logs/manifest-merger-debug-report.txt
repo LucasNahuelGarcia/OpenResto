@@ -5,6 +5,7 @@ INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/An
 INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:1:1-33:12
 INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:1:1-33:12
 MERGED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml:1:1-33:12
+MERGED from [:fluttertoast] /home/lucas/Documentos/proyectos/openresto/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_auth] /home/lucas/Documentos/proyectos/openresto/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] /home/lucas/Documentos/proyectos/openresto/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] /home/lucas/Documentos/proyectos/openresto/build/google_sign_in/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-9:12
@@ -146,6 +147,8 @@ uses-sdk
 INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/lucas/Documentos/proyectos/openresto/android/app/src/main/AndroidManifest.xml
+MERGED from [:fluttertoast] /home/lucas/Documentos/proyectos/openresto/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /home/lucas/Documentos/proyectos/openresto/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/lucas/Documentos/proyectos/openresto/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/lucas/Documentos/proyectos/openresto/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /home/lucas/Documentos/proyectos/openresto/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44

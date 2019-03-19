@@ -13,7 +13,7 @@ class VistaRegistrarseUserMail extends StatelessWidget {
             padding: EdgeInsets.only(top: 100.0),
           ),
           estilo.TituloRegistrarse(50.0),
-          forms.FormRegistrarse(),
+          forms.FormRegistrarseUserMail(),
         ],
       ),
     );
