@@ -4,7 +4,7 @@
             "outputFile": "/home/lucas/Documentos/proyectos/openresto/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/lucas/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/48add064b6eb6ce65ff005b21f6e0933/res/values-v24/values-v24.xml",
+                    "source": "/home/lucas/.gradle/caches/transforms-2/files-2.1/3bb451537843a445604d1b2a8d0d69db/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

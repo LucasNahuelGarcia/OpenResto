@@ -4,24 +4,24 @@
             "outputFile": "/home/lucas/Documentos/proyectos/openresto/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml",
             "map": [
                 {
-                    "source": "/home/lucas/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bbf3a2fd51b074e0729ecada00908642/res/values-mk/values-mk.xml",
+                    "source": "/home/lucas/.gradle/caches/transforms-2/files-2.1/92529b797d681d6bc9f52de7ae46137c/res/values-mk/values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "195",
+                        "endOffsets": "442"
                     },
                     "to": {
-                        "startLines": "20",
+                        "startLines": "10",
                         "startColumns": "4",
-                        "startOffsets": "2837",
-                        "endColumns": "100",
-                        "endOffsets": "2933"
+                        "startOffsets": "1282",
+                        "endColumns": "195",
+                        "endOffsets": "1473"
                     }
                 },
                 {
-                    "source": "/home/lucas/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/3f06350740f0639244b440bd323bbe98/res/values-mk/values.xml",
+                    "source": "/home/lucas/.gradle/caches/transforms-2/files-2.1/4d946841de56d66754cbfe67bb0b21ee/res/values-mk/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "/home/lucas/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/100fccfaaf2428ef18ef509183889e93/res/values-mk/values.xml",
+                    "source": "/home/lucas/.gradle/caches/transforms-2/files-2.1/1efaf1f7ddfd59784fc9bc535dc124d2/res/values-mk/values-mk.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "195",
-                        "endOffsets": "442"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "10",
+                        "startLines": "20",
                         "startColumns": "4",
-                        "startOffsets": "1282",
-                        "endColumns": "195",
-                        "endOffsets": "1473"
+                        "startOffsets": "2837",
+                        "endColumns": "100",
+                        "endOffsets": "2933"
                     }
                 }
             ]

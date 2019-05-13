@@ -5,13 +5,17 @@ import '../datosGlobales.dart' as datos;
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-class ProtoUsuario {
-  String nombre;
-  String email;
-  String password;
+Future<bool> cerrarSesion() async {
+  try{
+    _auth.signOut();
+    datos.usuario = null;
+    print('Sesión cerrada correctamente');
+    return true;
+  }catch(e){
+    print('Error cerrando sesión: $e');
+    return false;
+  }
 }
-
-ProtoUsuario protoUsuario = ProtoUsuario();
 
 Future<bool> intentarLogIn(String email, String passwrd) async {
   FirebaseUser user;

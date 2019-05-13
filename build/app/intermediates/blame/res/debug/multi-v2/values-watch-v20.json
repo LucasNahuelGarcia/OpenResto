@@ -4,7 +4,7 @@
             "outputFile": "/home/lucas/Documentos/proyectos/openresto/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/lucas/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/dcb55d833584cd7446873f83e81e18b1/res/values-watch-v20/values.xml",
+                    "source": "/home/lucas/.gradle/caches/transforms-2/files-2.1/2f772d0a4948ff0a6513b8fc37187184/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
