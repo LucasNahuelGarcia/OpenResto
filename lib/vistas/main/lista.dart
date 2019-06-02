@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart' as prefix0;
 import 'botonFlotanteMain.dart';
 import 'package:cloud_firestore/cloud_firestore.dart' as _cloud;
 import '../../funciones/dataGeter.dart' as _dataGet;
@@ -16,44 +17,43 @@ class ListaRest extends StatefulWidget {
 class ListaRestState extends State<ListaRest> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        StreamBuilder(
-          stream:
-              _cloud.Firestore.instance.collection('restaurantes').snapshots(),
-          builder: (context, snapshot) {
-            if (!snapshot.hasData)
-              return Text("Cargando...");
-            else {
-              return ListView.builder(
-                  itemExtent: 150.0,
-                  itemCount: snapshot.data.documents.length,
-                  itemBuilder: (context, index) {
-                    return _buildRestauranteItem(
-                        context, snapshot.data.documents[index]);
-                  });
-            }
-          },
-        ),
-        FloatingLabelMain(
-            alignment: Alignment.bottomLeft,
-            iconData: Icons.map,
-            onPressed: () => _mainGlobal.animarAPagina(0))
-      ],
+    return StreamBuilder(
+      stream: _cloud.Firestore.instance.collection('restaurantes').snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData)
+          return Text("Cargando...");
+        else {
+          return ListView.builder(
+              itemExtent: 150.0,
+              itemCount: snapshot.data.documents.length,
+              itemBuilder: (context, index) {
+                return _buildRestauranteItem(
+                    context, snapshot.data.documents[index]);
+              });
+        }
+      },
     );
   }
 
   Widget _buildRestauranteItem(context, res) {
-    return Card(
-      margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-      child: Container(
-        alignment: Alignment.topRight,
-        margin: EdgeInsets.all(10.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Column(
+    return Container(
+      alignment: Alignment.topRight,
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(
+          blurRadius: 6,
+          offset:
+              Offset.lerp(Offset.fromDirection(0), Offset.fromDirection(6), 0),
+        ),
+      ], color: Colors.white),
+      margin: EdgeInsets.symmetric(vertical: 6.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container( 
+            padding: EdgeInsets.all(10.0),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 //nombre
                 Text(
@@ -67,34 +67,36 @@ class ListaRestState extends State<ListaRest> {
                 Text('puntuacion: ${res['puntuacion']}'),
               ],
             ),
-            FutureBuilder<String>(
-              future: _dataGet.imagePath(res['imagen']),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return _cache.CachedNetworkImage(
-                    imageUrl: snapshot.data,
-                    imageBuilder: (context, imageProvider) {
-                      return AspectRatio(
-                        aspectRatio: 4 / 3,
-                        child: Image(
-                          image: imageProvider,
-                        ),
-                      );
-                    },
-                    fit: BoxFit.fitHeight,
-                    useOldImageOnUrlChange: true,
-                    placeholder: (string, context) => Icon(
-                          Icons.sentiment_neutral,
-                          size: 100.0,
-                        ),
-                  );
-                } else {
-                  return Container();
-                }
-              },
-            ),
-          ],
-        ),
+          ),
+
+          //Imagen
+          FutureBuilder<String>(
+            future: _dataGet.imagePath(res['imagen']),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return _cache.CachedNetworkImage(
+                  imageUrl: snapshot.data,
+                  imageBuilder: (context, imageProvider) {
+                    return Container(
+                      width: 200,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fitHeight,
+                            alignment: FractionalOffset.topCenter,
+                            image: imageProvider),
+                      ),
+                    );
+                  },
+                  fit: BoxFit.fitHeight,
+                  useOldImageOnUrlChange: true,
+                  placeholder: (context, string) => CircularProgressIndicator(),
+                );
+              } else {
+                return CircularProgressIndicator();
+              }
+            },
+          ),
+        ],
       ),
     );
   }

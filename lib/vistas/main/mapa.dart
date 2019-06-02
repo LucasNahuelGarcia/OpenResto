@@ -26,7 +26,7 @@ class MapaRestState extends State<MapaRest> {
           FloatingLabelMain(
             iconData: Icons.list,
             alignment: Alignment.bottomRight,
-            onPressed: () => _mainGlobal.animarAPagina(1),
+            onPressed: () =>   Scaffold.of(context).openEndDrawer(),
           )
         ],
       ),

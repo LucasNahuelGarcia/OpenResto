@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-final verdeClaro = const Color(0xFF6AAD0D);
-final verdeOscuro = const Color(0xFF00531C);
+final verdeClaro = const Color(0xFF72E172);
+final verdeOscuro = const Color(0xFF306530);
+final textoGris = const Color(0xFF707070);
 
-final principal = const Color(0xFF6AAD0D);
 final highlight = const Color(0xFF1AAD0D);

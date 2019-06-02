@@ -34,6 +34,9 @@ class StateFormLogIn extends State<FormLogIn> {
             validator: (val) => _validarEmail(val) ? null : 'Email invalido',
           ),
 
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 15),
+          ),
           //input Contraseña
           TextFormField(
             decoration: InputDecoration(
@@ -41,13 +44,11 @@ class StateFormLogIn extends State<FormLogIn> {
               prefixIcon: Icon(Icons.lock),
             ),
             onSaved: (val) => _pass = val,
-            validator: (val) =>
-                _validarPass(val) ? null : 'debe ser mayor a 6 caracteres',
           ),
 
           //botones
           Container(
-            padding: EdgeInsets.all(25.0),
+            padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 42),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -55,8 +56,6 @@ class StateFormLogIn extends State<FormLogIn> {
                 RaisedButton(
                   child: Text(
                     "Ingresar",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
                   ),
                   onPressed: () => tryLogIn(context),
                 ),
@@ -65,7 +64,6 @@ class StateFormLogIn extends State<FormLogIn> {
                 FlatButton(
                   child: Text(
                     "Registrarse",
-                    style: TextStyle(color: Colors.blueAccent),
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, "VistaRegistrarseUserMail");
@@ -84,13 +82,6 @@ class StateFormLogIn extends State<FormLogIn> {
   ///Funciones ---------------------------
   bool _validarEmail(String email) {
     if (email.contains('@') && email.contains('.'))
-      return true;
-    else
-      return false;
-  }
-
-  bool _validarPass(String pass) {
-    if (pass.length >= 6)
       return true;
     else
       return false;

@@ -21,8 +21,6 @@ class WidgetCorredizoState extends State<WidgetCorredizo> {
       onPageChanged: (item) {},
       scrollDirection: Axis.horizontal,
       children: <Widget>[
-        MapaRest(),
-        ListaRest(),
       ],
     );
   }

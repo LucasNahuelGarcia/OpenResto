@@ -10,28 +10,38 @@ class TituloApp extends StatelessWidget {
     return Text(
       "OpenResto",
       style: TextStyle(
-        fontFamily: "Oleo",
+        fontFamily: "JustAnotherHand",
         fontSize: fontSize,
-        color: colores.verdeClaro,
       ),
     );
   }
 }
 
 ThemeData temaDefault = ThemeData(
-  primaryColor: colores.principal,
-  highlightColor: colores.highlight,
-  textSelectionColor: Colors.blue,
-  indicatorColor: colores.principal,
-  backgroundColor: colores.verdeOscuro,
-  cursorColor: colores.principal,
+  primaryColor: colores.verdeClaro,
+  buttonColor: colores.verdeClaro,
+  appBarTheme: AppBarTheme(
+      color: Colors.white,
+      textTheme: TextTheme(
+        title: TextStyle(
+          color: colores.textoGris,
+          fontFamily: 'Montserrat',
+          fontWeight: FontWeight.w300,
+          fontSize: 41,
+          fontStyle: FontStyle.italic,
+        ),
+      )),
   inputDecorationTheme: InputDecorationTheme(
     hasFloatingPlaceholder: true,
-    border: OutlineInputBorder(),
-    fillColor: Colors.white,
-    filled: true,
-    hintStyle: TextStyle(color: Colors.grey),
+    hintStyle: TextStyle(color: colores.textoGris),
   ),
-  scaffoldBackgroundColor: Color(0xFF055360),
-  buttonColor: colores.principal,
+  textTheme: TextTheme(
+      body1: TextStyle(
+          color: colores.textoGris,
+          fontFamily: 'Montserrat',
+          fontWeight: FontWeight.w300),
+      button: TextStyle(
+          color: colores.verdeOscuro,
+          fontFamily: 'Montserrat',
+          fontWeight: FontWeight.w500)),
 );

@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import '../../clases/restaurant.dart';
 
+
 PageController sliderController = PageController();
 
 void animarAPagina(int pagina){
